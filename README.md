@@ -16,7 +16,7 @@ Se implementó un clúster de virtualización compuesto por **3 nodos físicos**
 | **Gestión** | QEMU Agent | Optimización y control de VMs |
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/TU_ID_IMAGEN_CLÚSTER" width="70%" alt="Vista del Clúster">
+  <img src="https://github.com/user-attachments/assets/01c48c49-5c38-444b-a6fa-afb06e14243a" width="60%" alt="Vista del Clúster"/>
   <br>
   <em>Figura 1: Vista general del clúster con los tres nodos integrados y operativos.</em>
 </p>
@@ -24,11 +24,11 @@ Se implementó un clúster de virtualización compuesto por **3 nodos físicos**
 ### 3. Especificaciones del Proyecto
 El entorno fue diseñado bajo estándares de centro de datos para maximizar el rendimiento de los servicios distribuidos:
 * **Nodos:** 3 servidores con Proxmox instalado.
-* **Almacenamiento:** Creación del pool `ssdpool` distribuido para baja latencia.
+* **Almacenamiento:** Creación del pool "ssdpool" distribuido para baja latencia.
 * **Red:** Configuración de puentes virtuales (Linux Bridges) con soporte para VLANs y QEMU Agent activo.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/TU_ID_ANEXO_1" width="60%">
+  <img src="https://github.com/user-attachments/assets/086a799b-3543-496d-81ff-7d50d581085c" width="350"/>
   <br>
   <em>Configuración de almacenamiento compartido "ssdpool" entre nodos.</em>
 </p>
@@ -50,24 +50,24 @@ Se realizó la instalación limpia de Proxmox en los tres servidores, integránd
 
 | Configuración de Pool SSD | Selección de Imagen ISO |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/TU_ID_ANEXO_1" width="350"> | <img src="https://github.com/user-attachments/assets/TU_ID_ANEXO_2" width="350"> |
-| *Creación de almacenamiento compartido.* | *Gestión centralizada de instaladores.* |
+| <img src="https://github.com/user-attachments/assets/f10f77f2-e736-4dbf-a4b0-1667161f1356" width="350"> | <img src="https://github.com/user-attachments/assets/6cf6d3a7-bf51-49f0-a060-f48d1959e56d" width="350"/>
+| *Configuración de almacenamiento compartido.* | *Gestión centralizada de instaladores.* |
 
 #### B. Aprovisionamiento de Máquinas Virtuales (VMs)
 Se estandarizó el proceso de creación de VMs, optimizando el uso de CPU, memoria RAM con **ballooning** activo y optimización de disco mediante VirtIO.
 
 | Configuración de CPU/RAM | Interfaz de Red (Bridge) |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/TU_ID_ANEXO_8" width="400"> | <img src="https://github.com/user-attachments/assets/TU_ID_ANEXO_10" width="400"> |
-| *Asignación de núcleos y tipo de procesador.* | *Configuración de puente de red vmbr0.* |
+| <img src="https://github.com/user-attachments/assets/ce85a922-4284-4cd5-a6d9-4a12fa97a5e7" width="350"> | <img src="https://github.com/user-attachments/assets/fd6c0440-a5ae-475d-a972-eecc23e9814e" width="350"> |
+| *Asignación de memoria RAM.* | *Configuración de puente de red vmbr0.* |
 
 #### C. Resiliencia y Monitoreo
 Se validó la capacidad del clúster para mantener servicios activos y la visibilidad de los recursos de hardware desde la interfaz centralizada de Proxmox.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/TU_ID_IMAGEN_MONITOREO" width="80%">
+  <img src="https://github.com/user-attachments/assets/e1a80c89-2cf5-4fe9-87e0-b1b6c9ccd297" width="350">
   <br>
-  <em>Gráficas de rendimiento y salud del clúster en tiempo real.</em>
+  <em>Vista centralizadas de los recursos disponibles en el cluster.</em>
 </p>
 
 ---
